@@ -1,0 +1,21 @@
+{
+  "name": "design-patterns-exercises",
+  "version": "1.0.0",
+  "description": "Design Patterns Exercises with Interactive Menu",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run build:all && tsc",
+    "build:all": "cd exercise1 && npm install && npm run build && cd ../exercise2 && npm install && npm run build && cd ../exercise3 && npm install && npm run build && cd ..",
+    "start": "npm run build && node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/inquirer": "^8.2.6",
+    "@types/node": "^20.0.0"
+  }
+}

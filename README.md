@@ -1,46 +1,99 @@
-# Patrones de Diseño
+# Design Patterns Exercises
 
-Este repositorio contiene un trabajo en grupo sobre patrones de diseño implementados en TypeScript. El proyecto está dividido en 3 ejercicios, cada uno en su propia carpeta.
+Este proyecto contiene una colección de ejercicios de patrones de diseño con un menú interactivo que permite seleccionar y ejecutar cada ejercicio de manera sencilla.
 
-## Estructura del Proyecto
+## 🎯 Ejercicios Incluidos
 
-- `exercise1/`: Carpeta del primer ejercicio (ver README.md para detalles del problema)
-- `exercise2/`: Carpeta del segundo ejercicio (ver README.md para detalles del problema)
-- `exercise3/`: Carpeta del tercer ejercicio (ver README.md para detalles del problema)
-- `.gitignore`: Archivos ignorados por Git (node_modules, dist, etc.)
+### 1. Builder Pattern (Ejercicio 1)
+**Patrón:** Builder  
+**Descripción:** Construcción de automóviles personalizados  
+**Problema:** Crear objetos complejos con múltiples configuraciones opcionales sin usar constructores telescópicos.
 
-Cada carpeta de ejercicio contiene:
-- `package.json`: Dependencias y scripts de npm
-- `tsconfig.json`: Configuración de TypeScript
-- `src/`: Código fuente en TypeScript
-- `dist/`: Archivos compilados (ignorados en Git)
-- `README.md`: Descripción detallada del problema y beneficios esperados
+### 2. Bridge Pattern (Ejercicio 2)
+**Patrón:** Bridge  
+**Descripción:** Sistema de notificaciones multiplataforma  
+**Problema:** Separar la abstracción de notificaciones de su implementación específica por plataforma.
 
-## Instrucciones de Uso
+### 3. Mediator Pattern (Ejercicio 3)
+**Patrón:** Mediator  
+**Descripción:** Sistema de chat grupal  
+**Problema:** Gestionar comunicación entre objetos sin que tengan referencias directas entre sí.
 
-Para trabajar en un ejercicio específico:
+## 🚀 Cómo ejecutar
 
-1. Navega a la carpeta del ejercicio: `cd exercise1` (o exercise2/exercise3)
-2. Compila el código: `npm run build`
-3. Ejecuta el programa: `npm start`
+### Opción 1: Usando npm (Recomendado)
+```bash
+npm start
+```
 
-## Criterios Generales
+### Opción 2: Usando el script runner
+```bash
+node run.js
+```
 
-### Actividad: Patrones de diseño
+### Opción 3: Compilar y ejecutar manualmente
+```bash
+npm run build
+node dist/index.js
+```
 
-#### Descripción:
-En los siguientes tres ejercicios deberá:
-- Identificar el tipo de patrón (Estructural, comportamiento, creacional)
-- Seleccionar el patrón que considera que es.
-- Diseñar el diagrama de clases de la solución.
-- Desarrollar el código del ejercicio.
+## ✨ Características del Menú
 
-## Contribución
+- 🔨 **Construcción automática**: Compila todos los ejercicios automáticamente al iniciar
+- 🎨 **Interfaz visual**: Menú colorido y fácil de usar con chalk
+- 📋 **Selección interactiva**: Usa inquirer para navegación intuitiva
+- 🔄 **Ejecución en bucle**: Permite ejecutar múltiples ejercicios sin reiniciar
+- ✅ **Manejo de errores**: Reporta problemas de construcción o ejecución
 
-Cada miembro del grupo puede trabajar en su ejercicio asignado. Recuerda hacer push de los cambios a medida que se resuelvan los problemas.
+## 📦 Dependencias
 
-## Notas
+### Producción
+- `chalk`: Para colores y formato en la consola
+- `inquirer`: Para menús interactivos
 
-- Asegúrate de tener Node.js instalado.
-- Las dependencias ya están instaladas en cada carpeta.
-- Usa Git para versionar los cambios.
+### Desarrollo
+- `typescript`: Compilador de TypeScript
+- `@types/inquirer`: Tipos para inquirer
+- `@types/node`: Tipos para Node.js
+
+## 🛠️ Scripts Disponibles
+
+- `npm start`: Construye y ejecuta el menú interactivo
+- `npm run build`: Construye todos los ejercicios y compila el menú
+- `npm run build:all`: Solo construye los ejercicios individuales
+- `npm run dev`: Compila solo el menú y lo ejecuta (sin construir ejercicios)
+
+## 📁 Estructura del Proyecto
+
+```
+design-patterns/
+├── package.json           # Configuración principal
+├── tsconfig.json         # Configuración TypeScript
+├── run.js               # Script runner alternativo
+├── src/
+│   └── index.ts         # Menú interactivo principal
+├── exercise1/           # Builder Pattern
+├── exercise2/           # Bridge Pattern
+└── exercise3/           # Mediator Pattern
+```
+
+## 🎮 Uso del Menú
+
+1. **Inicio automático**: Al ejecutar, se construyen todos los ejercicios
+2. **Selección**: Elige el ejercicio que deseas ejecutar del menú
+3. **Ejecución**: El ejercicio se ejecuta y muestra sus resultados
+4. **Continuación**: Presiona Enter para volver al menú
+5. **Salida**: Selecciona "Salir" para terminar la aplicación
+
+## 🔧 Requisitos
+
+- Node.js >= 14.0.0
+- npm >= 6.0.0
+- TypeScript >= 5.0.0
+
+## 💡 Notas
+
+- Todos los ejercicios se compilan automáticamente en TypeScript
+- Los resultados de cada ejercicio se muestran directamente en la consola
+- El sistema maneja errores de compilación y ejecución de manera elegante
+- Puedes ejecutar el mismo ejercicio múltiples veces sin problemas
